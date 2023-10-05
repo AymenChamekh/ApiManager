@@ -1,1 +1,38 @@
-<p>category works!</p>
+<!-- category.component.html
+
+<h2>Add Category</h2>
+
+<form [formGroup]="categoryForm">
+  <div>
+    <label for="nameCategory"><b>Name Category</b></label>
+    <input type="text" id="nameCategory" formControlName="nameCategory" required>
+  </div>
+</form>
+
+<button type="button" (click)="addCategory()">Add</button>
+<button type="button" (click)="cancel()">Cancel</button>
+-->
+<!--get Categories-->
+<div class="container" id="main-container">
+  <div class="row">
+    <div *ngFor="let category of categories" class="col-md-6 col-xl-3">
+       <div class="card m-b-30">
+          <div class="card-body row">
+             <div class="col-6">
+                <a href=""><img src="" alt="" class="img-fluid rounded-circle w-60"></a>
+             </div>
+
+          </div>
+          <ul class="list-group list-group-flush">
+             <li class="list-group-item"><i class="fa fa-envelope float-right"></i>{{category?.nameCategory}}</li>
+          </ul>
+          <div class="card-body">
+             <div class="float-right btn-group btn-group-sm">
+                <a class="btn btn-primary tooltips" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
+                <a class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i class="fa fa-times"></i></a>
+             </div>
+          </div>
+       </div>
+    </div>
+  </div>
+
