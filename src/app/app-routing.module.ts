@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { CategoryComponent } from './pages/category/category.component';
 import { CategoryServiceService } from './services/category-service.service';
 

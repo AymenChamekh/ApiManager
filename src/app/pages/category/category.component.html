@@ -13,11 +13,15 @@
 <button type="button" (click)="cancel()">Cancel</button>
 -->
 <!--get Categories-->
+
 <div class="container" id="main-container">
   <div class="row">
     <div *ngFor="let category of categories" class="col-md-6 col-xl-3">
        <div class="card m-b-30">
-          <div class="card-body row">
+
+
+
+         <div class="card-body row">
              <div class="col-6">
                 <a href=""><img src="" alt="" class="img-fluid rounded-circle w-60"></a>
              </div>
@@ -28,11 +32,14 @@
           </ul>
           <div class="card-body">
              <div class="float-right btn-group btn-group-sm">
-                <a class="btn btn-primary tooltips" data-placement="top" data-original-title="Edit"><i class="fa fa-pencil"></i> </a>
-                <a class="btn btn-secondary tooltips" data-placement="top" data-original-title="Delete"><i class="fa fa-times"></i></a>
+              <button type="button" class="btn btn-info">Edit</button>
+
+              <button type="button" class="btn btn-danger">Delete</button>
              </div>
           </div>
        </div>
+
     </div>
   </div>
+
 
