@@ -1,4 +1,4 @@
-abstract class Organization{
+export abstract class Organization{
 
   name : String;
   adress : String;

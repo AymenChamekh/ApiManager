@@ -1,4 +1,5 @@
 import { Api } from "./api";
+import { Organization } from "./organization";
 
 export class Provider extends Organization{
 
