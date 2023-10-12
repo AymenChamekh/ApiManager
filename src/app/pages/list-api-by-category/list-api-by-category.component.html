@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="card shadow ">
+    <div class="card-header">
+      <h2 id="p">APIs</h2>
+    </div>
+
+
+
+
+    <table mat-table matSort [dataSource]="datasource">
+
+
+
+      <!-- Name Api Column -->
+      <ng-container matColumnDef="nameApi">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> <b>Name</b> </th>
+        <td mat-cell *matCellDef="let element"> {{element.nameApi}} </td>
+      </ng-container>
+
+      <!-- State Column -->
+      <ng-container matColumnDef="State">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> <b>State </b> </th>
+        <td mat-cell *matCellDef="let element"> {{element.apiState}} </td>
+      </ng-container>
+
+      <!-- Type Column -->
+      <ng-container matColumnDef="Type">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> <b>Type </b> </th>
+        <td mat-cell *matCellDef="let element"> {{element.apiType}} </td>
+      </ng-container>
+
+      <!-- Version Column -->
+      <ng-container matColumnDef="Version">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> <b>Version </b> </th>
+        <td mat-cell *matCellDef="let element"> {{element.version}} </td>
+      </ng-container>
+
+
+      <!-- Name Provider Column -->
+      <ng-container matColumnDef="Name Provider">
+        <th mat-header-cell mat-sort-header *matHeaderCellDef> <b>Provider</b> </th>
+        <td mat-cell *matCellDef="let element"> {{element.apiProvider}} </td>
+      </ng-container>
+
+
+      <!-- Actions Column -->
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef>
+        </th>
+        <td mat-cell *matCellDef="let element">
+          <button mat-button class="menu-button" color="purple">
+            <mat-icon routerLink="">edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn">
+            <mat-icon>delete_outline</mat-icon>
+          </button>
+          <button mat-icon-button color="bg-light">
+            <mat-icon routerLink="">spellcheck</mat-icon>
+          </button>
+          <button mat-icon-button color="bg-light">
+            <mat-icon routerLink="">visibility</mat-icon>
+          </button>
+        </td>
+      </ng-container>
+
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+
+    </table>
+
+    <mat-paginator #paginator [pageSize]="5" [pageSizeOptions]="[ 5, 10, 25, 100]">
+    </mat-paginator>
+
+  </div>
+</div>

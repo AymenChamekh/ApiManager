@@ -6,18 +6,28 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { MatTableModule } from "@angular/material/table";
 import { MatPaginatorModule } from '@angular/material/paginator';
 import {MatIconModule} from '@angular/material/icon';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { MatToolbarModule } from '@angular/material/toolbar';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './pages/home/home.component';
 import { CategoryComponent } from './pages/category/category.component';
 import { ListApisComponent } from './pages/list-apis/list-apis.component';
 import { provideAnimations } from '@angular/platform-browser/animations';
+import { SidenavComponent } from './pages/sidenav/sidenav.component';
+import { ListApiByCategoryComponent } from './pages/list-api-by-category/list-api-by-category.component';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     CategoryComponent,
-    ListApisComponent
+    ListApisComponent,
+    SidenavComponent,
+    ListApiByCategoryComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +37,12 @@ import { provideAnimations } from '@angular/platform-browser/animations';
     MatIconModule,
     MatFormFieldModule,
     MatTableModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    MatDividerModule,
+    MatListModule,
+    MatMenuModule,
+    MatSidenavModule,
+    MatToolbarModule
 
   ],
   providers: [provideAnimations()],

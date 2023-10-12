@@ -28,4 +28,6 @@ export class ApiService {
 
     public getApi(id : number): Observable<any>{
       return this.http.get<ApiDto>(`${this.apiServerUrl}/api/find/${id}`); }
+      public getApisByCategory(id :number): Observable<ApiDto[]>{
+        return this.http.get<ApiDto[]>(`${this.apiServerUrl}/api/findByCategory/${id}`); }
 }
