@@ -19,7 +19,10 @@ import { ListApisComponent } from './pages/list-apis/list-apis.component';
 import { provideAnimations } from '@angular/platform-browser/animations';
 import { SidenavComponent } from './pages/sidenav/sidenav.component';
 import { ListApiByCategoryComponent } from './pages/list-api-by-category/list-api-by-category.component';
-
+import { CreationComponent } from './pages/creation/creation.component';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCardModule } from '@angular/material/card';
+import { MatDialogModule } from '@angular/material/dialog';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,7 +30,8 @@ import { ListApiByCategoryComponent } from './pages/list-api-by-category/list-ap
     CategoryComponent,
     ListApisComponent,
     SidenavComponent,
-    ListApiByCategoryComponent
+    ListApiByCategoryComponent,
+    CreationComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +46,10 @@ import { ListApiByCategoryComponent } from './pages/list-api-by-category/list-ap
     MatListModule,
     MatMenuModule,
     MatSidenavModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatButtonModule,
+    MatCardModule,
+    MatDialogModule
 
   ],
   providers: [provideAnimations()],

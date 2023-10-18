@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100vh;
+}
+
+.card {
+  width: 200px;
+  text-align: center;
+}

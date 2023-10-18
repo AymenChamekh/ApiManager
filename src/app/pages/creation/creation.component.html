@@ -1,0 +1,38 @@
+
+<div class="container">
+  <mat-card class="card">
+    <button mat-button color="primary" >Add API</button>
+  </mat-card>
+
+  <mat-card class="card">
+    <button mat-button color="primary" (click)="openDialog()">Add Provider</button>
+  </mat-card>
+
+  <mat-card class="card">
+    <button mat-button color="primary" >Add Consumer</button>
+  </mat-card>
+</div>
+
+<!-- api-form.component.html -->
+<form [formGroup]="providerForm" (ngSubmit)="onSubmit()">
+  <label for="ProviderName">Provider Name:</label>
+  <input type="text" id="name" formControlName="name" required>
+
+  <label for="ProviderAdress">Provider Adress:</label>
+  <input type="text" id="adress" formControlName="adress" required>
+
+  <label for="ProviderMail">Provider Name:</label>
+  <input type="text" id="mail" formControlName="mail" required>
+
+  <label for="ProviderPhone">Provider Name:</label>
+  <input type="text" id="phone" formControlName="phone" required>
+
+  <label for="ProviderNbrAutho">Provider Name:</label>
+  <input type="number" id="nbrAuthorisation" formControlName="nbrAuthorisation" required>
+
+  <button type="submit" [disabled]="!providerForm.valid">Submit</button>
+</form>
+name : String;
+adress : String;
+phone : String;
+mail: String;
