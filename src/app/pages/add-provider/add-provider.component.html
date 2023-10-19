@@ -1,0 +1,56 @@
+<div class="card">
+  <div class="card-header">
+    <h5 class="card-title">Provider Information</h5>
+  </div>
+  <div class="card-body">
+    <form [formGroup]="providerForm" (ngSubmit)="onSubmit()">
+
+      <div class="form-group">
+        <label for="name">Provider Name:</label>
+        <div class="input-group">
+          <input type="text" id="name" formControlName="name" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="adress">Provider Address:</label>
+        <div class="input-group">
+          <input type="text" id="adress" formControlName="adress" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="mail">E-mail:</label>
+        <div class="input-group">
+          <input type="text" id="mail" formControlName="mail" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="phone">Phone Number:</label>
+        <div class="input-group">
+          <input type="text" id="phone" formControlName="phone" required>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="nbrAuthorisation">Authorization:</label>
+        <div class="input-group">
+          <input type="number" id="nbrAuthorisation" formControlName="nbrAuthorisation" required>
+        </div>
+      </div>
+
+
+
+    </form>
+  </div>
+  <div class="card-footer">
+    <div class="button-group">
+      <button type="submit" [disabled]="!providerForm.valid">Add</button>
+      <button type="button" (click)="onCancel()">Cancel</button>
+    </div>
+  </div>
+</div>
+
+
+

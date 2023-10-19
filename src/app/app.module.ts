@@ -23,6 +23,7 @@ import { CreationComponent } from './pages/creation/creation.component';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatDialogModule } from '@angular/material/dialog';
+import { AddProviderComponent } from './pages/add-provider/add-provider.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -31,7 +32,8 @@ import { MatDialogModule } from '@angular/material/dialog';
     ListApisComponent,
     SidenavComponent,
     ListApiByCategoryComponent,
-    CreationComponent
+    CreationComponent,
+    AddProviderComponent
   ],
   imports: [
     BrowserModule,
